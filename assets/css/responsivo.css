@@ -1,0 +1,29 @@
+@media screen and (max-width: 1224px){
+	.populares__conteudo {
+		grid-template-columns: repeat(4, calc(25% - 1rem));
+	}
+}
+@media screen and (max-width: 992px){
+	.populares__conteudo {
+		grid-template-columns: repeat(3, calc(33.33% - 1rem));
+	}
+}
+
+@media screen and (max-width: 768px){
+	.destaques__principal, .destaques__categorias {
+		grid-column: 1/5;
+	}
+	.destaques__secundario:not(:nth-child(1)) {
+		display: none;
+		grid-template-columns: none;
+		grid-template-rows: none;
+	}
+
+	.populares__conteudo {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+
+
